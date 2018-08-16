@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Output from BusinessCoder Analysis</title>
+<style>
+table {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 4px;
+}
+</style>
+</head>
+
+<h2 style="text-align: center;">BusinessCoder's Performance Against Inputted Data Set</h2>
+
+<h4 style="text-align: center;">Number of Total Entries: $totalSize</h4>
+<h4 style="text-align: center;">Number of Distinct Entries: $distinctSize</h4>
+
+<br />
+
+<table id="results">
+	<caption>Result Codes</caption>
+	<!-- Table Header -->
+	<tr>
+		<th>Code</th>
+		<th>Description</th>
+		<th>Count</th>
+		<th>Percentage out of Distinct Entries</th>
+		<th>Percentage out of Total Entries</th>
+	</tr>
+
+	<!-- Address Status Codes -->
+	<tr>
+		<td>AS01</td>
+		<td>Addresses Fully Verified</td>
+		<td>$as01</td>
+		<td bgcolor="$bg">$as01%</td>
+		<td bgcolor="$bg">$as01%</td>
+		
+	</tr>
+	<tr>
+		<td>AS02</td>
+		<td>Street Only Matches</td>
+		<td>$as02</td>
+		<td bgcolor="$bg">$as02%</td>
+		<td bgcolor="$bg">$as02%</td>
+		
+	</tr>
+	<tr>
+		<td>AS03</td>
+		<td>Non USPS Address Matches</td>
+		<td>$as03</td>
+		<td bgcolor="$bg">$as03%</td>
+		<td bgcolor="$bg">$as03%</td>
+
+	</tr>
+
+	<tr>
+		<td>AS13</td>
+		<td>Addresses Updated by LACS</td>
+		<td>$as13</td>
+		<td bgcolor="$bg">$as13%</td>
+		<td bgcolor="$bg">$as13%</td>
+
+	</tr>
+	<tr>
+		<td>AS14</td>
+		<td>Suites Appended</td>
+		<td>$as14</td>
+		<td bgcolor="$bg">$as14%</td>
+		<td bgcolor="$bg">$as14%</td>
+
+	</tr>
+	<tr>
+		<td>AS15</td>
+		<td>Apartments Appended</td>
+		<td>$as15</td>
+		<td bgcolor="$bg">$as15%</td>
+		<td bgcolor="$bg">$as15%</td>
+
+	</tr>
+	<tr>
+		<td>AS16</td>
+		<td>Vacant Addresses</td>
+		<td>$as16</td>
+		<td bgcolor="$bg">$as16%</td>
+		<td bgcolor="$bg">$as16%</td>
+
+	</tr>
+	<tr>
+		<td>AS17</td>
+		<td>No Mail Delivery Addresses</td>
+		<td>$as17</td>
+		<td bgcolor="$bg">$as17%</td>
+		<td bgcolor="$bg">$as17%</td>
+
+	</tr>
+	<tr>
+		<td>AS20</td>
+		<td>Deliverable only by USPS Addresses</td>
+		<td>$as20</td>
+		<td bgcolor="$bg">$as20%</td>
+		<td bgcolor="$bg">$as20%</td>
+
+	</tr>
+	<tr>
+		<td>AS23</td>
+		<td>Extraneous Information Used</td>
+		<td>$as23</td>
+		<td bgcolor="$bg">$as23%</td>
+		<td bgcolor="$bg">$as23%</td>
+
+	</tr>
+
+	<!-- Business/Form Status Codes -->
+	<tr>
+		<td>FS01</td>
+		<td>Data Matches</td>
+		<td>$fs01</td>
+		<td bgcolor="$bg">$fs01%</td>
+		<td bgcolor="$bg">$fs01%</td>
+	</tr>
+	<tr>
+		<td>FS02</td>
+		<td>Company Matches</td>
+		<td>$fs02</td>
+		<td bgcolor="$bg">$fs02%</td>
+		<td bgcolor="$bg">$fs02%</td>
+	</tr>
+	<tr>
+		<td>FS03</td>
+		<td>MAK Matches</td>
+		<td>$fs03</td>
+		<td bgcolor="$bg">$fs03%</td>
+		<td bgcolor="$bg">$fs03%</td>
+	</tr>
+	<tr>
+		<td>FS04</td>
+		<td>Address Matches</td>
+		<td>$fs04</td>
+		<td bgcolor="$bg">$fs04%</td>
+		<td bgcolor="$bg">$fs04%</td>
+	</tr>
+	<tr>
+		<td>FS05</td>
+		<td>Phone Matches</td>
+		<td>$fs05</td>
+		<td bgcolor="$bg">$fs05%</td>
+		<td bgcolor="$bg">$fs05%</td>
+	</tr>
+	<tr>
+		<td>FS07</td>
+		<td>Web Address Matches</td>
+		<td>$fs07</td>
+		<td bgcolor="$bg">$fs07%</td>
+		<td bgcolor="$bg">$fs07%</td>
+	</tr>
+	<tr>
+		<td>FS08</td>
+		<td>MEK Matches</td>
+		<td>$fs08</td>
+		<td bgcolor="$bg">$fs08%</td>
+		<td bgcolor="$bg">$fs08%</td>
+	</tr>
+</table>
+
+<br />
+
+<table id="phoneStats">
+	<caption>Phone Number Statistics</caption>
+	<tr>
+		<th>Phone Match Type</th>
+		<th>Count</th>
+		<th>Percentage out of Distinct Entries</th>
+		<th>Percentage out of Total Entries</th>
+	</tr>
+	<tr>
+		<td>Number of Entries with Matching Phone Numbers</td>
+		<td>$countMatchedPhones</td>
+		<td>$percentageDistinctMatchedPhones%</td>
+		<td>$percentageTotalMatchedPhones%</td>
+	</tr>
+	<tr>
+		<td>Number of Entries with Both Null Phone Numbers</td>
+		<td>$countBothNullPhones</td>
+		<td>$percentageDistinctBothNullPhones%</td>
+		<td>$percentageTotalBothNullPhones%</td>
+	</tr>
+	<tr>
+		<td>Number of Entries with Different, Non-Null Phone Numbers</td>
+		<td>$countDiffPhones</td>
+		<td>$percentageDistinctDiffPhones%</td>
+		<td>$percentageTotalDiffPhones%</td>
+	</tr>
+	<tr>
+		<td>Number of Entries with Null Response Phone Number</td>
+		<td>$countNullResponsePhone</td>
+		<td>$percentageDistinctNullResponsePhone%</td>
+		<td>$percentageTotalNullResponsePhone%</td>
+	</tr>
+	<tr>
+		<td>Number of Entries with Null Input Phone Number</td>
+		<td>$countNullInputPhone</td>
+		<td>$percentageDistinctNullInputPhone%</td>
+		<td>$percentageTotalNullInputPhone%</td>
+	</tr>
+</table>
+
+<br />
+
+<table id="nullCompanyName">
+	<caption>Null Company Name</caption>
+	<tr>
+		<th>Type</th>
+		<th>Count</th>
+		<th>Percentage</th>
+	</tr>
+	<tr>
+		<td>BusinessCoder Null Company Name Entries</td>
+		<td>$countBusinessCoderNullCompanyName</td>
+		<td>$percentageBusinessCoderNullCompanyName%</td>
+	</tr>
+	<tr>
+		<td>SQL Null Company Name Entries</td>
+		<td>$countSqlNullCompanyName</td>
+		<td>$percentageSqlNullCompanyName%</td>
+	</tr>
+</table>
+
+
+<br />
+
+<table id="contactIntersect">
+	<caption>Matched Contacts between SQL Input and BusinessCoder</caption>
+	<tr>
+		<th>Contacts Matched Count</th>
+		<th>Total Contacts</th>
+		<th>Percentage out of Total Contact Entries</th>
+	</tr>
+	<tr>
+		<td>$countMatchedContacts</td>
+		<td>$totalContacts</td>
+		<td>$percentageMatchedContacts%</td>
+	</tr>
+</table>
+
+<br />
+
+<p>
+	<b>Notes:</b> <br /> This report uses
+	http://etstage1.melissadata.com:30070/WEB/BusinessCoder/doBusinessCoderUS
+	<br />
+	<br /> All counts and percentages are out of the total distinct entries
+	from the input data set, NOT the total entries.
+	<br />
+	<br /> Currently, Input contacts' company name is matched using equal 'companyName'.
+	This skews the Contacts Statistics table. It can be changed to either like or excludes,
+	which will both increase the Input Contacts.
+	<br />
+	<br /> 'Percentage out of Total Entries' is out of static size of entire SQL table.
+</p>
+
+</body>
+</html>

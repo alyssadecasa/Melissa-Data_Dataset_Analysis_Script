@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Output from BusinessCoder Analysis</title>
+<style>
+table {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 4px;
+}
+</style>
+</head>
+
+<h2 style="text-align: center;">BusinessCoder's Performance Against Inputted Data Set</h2>
+
+<h4 style="text-align: center;">Number of Total Entries: 33372</h4>
+<h4 style="text-align: center;">Number of Distinct Entries: 30917</h4>
+
+<br />
+
+<table id="results">
+	<caption>Result Codes</caption>
+	<!-- Table Header -->
+	<tr>
+		<th>Code</th>
+		<th>Description</th>
+		<th>Count</th>
+		<th>Percentage out of Distinct Entries</th>
+		<th>Percentage out of Total Entries</th>
+	</tr>
+
+	<!-- Address Status Codes -->
+	<tr>
+		<td>AS01</td>
+		<td>Addresses Fully Verified</td>
+		<td>29533</td>
+		<td bgcolor="ffffff">95.52%</td>
+		<td bgcolor="ffffff">88.5%</td>
+		
+	</tr>
+	<tr>
+		<td>AS02</td>
+		<td>Street Only Matches</td>
+		<td>292</td>
+		<td bgcolor="ffffff">0.94%</td>
+		<td bgcolor="ffffff">0.87%</td>
+		
+	</tr>
+	<tr>
+		<td>AS03</td>
+		<td>Non USPS Address Matches</td>
+		<td>0</td>
+		<td bgcolor="ffffff">0.0%</td>
+		<td bgcolor="ffffff">0.0%</td>
+
+	</tr>
+
+	<tr>
+		<td>AS13</td>
+		<td>Addresses Updated by LACS</td>
+		<td>74</td>
+		<td bgcolor="ffffff">0.24%</td>
+		<td bgcolor="ffffff">0.22%</td>
+
+	</tr>
+	<tr>
+		<td>AS14</td>
+		<td>Suites Appended</td>
+		<td>0</td>
+		<td bgcolor="ffffff">0.0%</td>
+		<td bgcolor="ffffff">0.0%</td>
+
+	</tr>
+	<tr>
+		<td>AS15</td>
+		<td>Apartments Appended</td>
+		<td>0</td>
+		<td bgcolor="ffffff">0.0%</td>
+		<td bgcolor="ffffff">0.0%</td>
+
+	</tr>
+	<tr>
+		<td>AS16</td>
+		<td>Vacant Addresses</td>
+		<td>700</td>
+		<td bgcolor="ffffff">2.26%</td>
+		<td bgcolor="ffffff">2.1%</td>
+
+	</tr>
+	<tr>
+		<td>AS17</td>
+		<td>No Mail Delivery Addresses</td>
+		<td>1742</td>
+		<td bgcolor="ffffff">5.63%</td>
+		<td bgcolor="ffffff">5.22%</td>
+
+	</tr>
+	<tr>
+		<td>AS20</td>
+		<td>Deliverable only by USPS Addresses</td>
+		<td>2584</td>
+		<td bgcolor="ffffff">8.36%</td>
+		<td bgcolor="ffffff">7.74%</td>
+
+	</tr>
+	<tr>
+		<td>AS23</td>
+		<td>Extraneous Information Used</td>
+		<td>87</td>
+		<td bgcolor="ffffff">0.28%</td>
+		<td bgcolor="ffffff">0.26%</td>
+
+	</tr>
+
+	<!-- Business/Form Status Codes -->
+	<tr>
+		<td>FS01</td>
+		<td>Data Matches</td>
+		<td>28299</td>
+		<td bgcolor="ffffff">91.53%</td>
+		<td bgcolor="ffffff">84.8%</td>
+	</tr>
+	<tr>
+		<td>FS02</td>
+		<td>Company Matches</td>
+		<td>20427</td>
+		<td bgcolor="ffffff">66.07%</td>
+		<td bgcolor="ffffff">61.21%</td>
+	</tr>
+	<tr>
+		<td>FS03</td>
+		<td>MAK Matches</td>
+		<td>0</td>
+		<td bgcolor="ffffff">0.0%</td>
+		<td bgcolor="ffffff">0.0%</td>
+	</tr>
+	<tr>
+		<td>FS04</td>
+		<td>Address Matches</td>
+		<td>21439</td>
+		<td bgcolor="ffffff">69.34%</td>
+		<td bgcolor="ffffff">64.24%</td>
+	</tr>
+	<tr>
+		<td>FS05</td>
+		<td>Phone Matches</td>
+		<td>1072</td>
+		<td bgcolor="ffffff">3.47%</td>
+		<td bgcolor="ffffff">3.21%</td>
+	</tr>
+	<tr>
+		<td>FS07</td>
+		<td>Web Address Matches</td>
+		<td>13391</td>
+		<td bgcolor="ffffff">43.31%</td>
+		<td bgcolor="ffffff">40.13%</td>
+	</tr>
+	<tr>
+		<td>FS08</td>
+		<td>MEK Matches</td>
+		<td>27815</td>
+		<td bgcolor="ffffff">89.97%</td>
+		<td bgcolor="ffffff">83.35%</td>
+	</tr>
+</table>
+
+<br />
+
+<table id="phoneStats">
+	<caption>Phone Number Statistics</caption>
+	<tr>
+		<th>Phone Match Type</th>
+		<th>Count</th>
+		<th>Percentage out of Distinct Entries</th>
+		<th>Percentage out of Total Entries</th>
+	</tr>
+	<tr>
+		<td>Number of Entries with Matching Phone Numbers</td>
+		<td>920</td>
+		<td>2.98%</td>
+		<td>2.76%</td>
+	</tr>
+	<tr>
+		<td>Number of Entries with Both Null Phone Numbers</td>
+		<td>3060</td>
+		<td>9.9%</td>
+		<td>9.17%</td>
+	</tr>
+	<tr>
+		<td>Number of Entries with Different, Non-Null Phone Numbers</td>
+		<td>869</td>
+		<td>2.81%</td>
+		<td>2.6%</td>
+	</tr>
+	<tr>
+		<td>Number of Entries with Null Response Phone Number</td>
+		<td>149</td>
+		<td>0.48%</td>
+		<td>0.45%</td>
+	</tr>
+	<tr>
+		<td>Number of Entries with Null Input Phone Number</td>
+		<td>25919</td>
+		<td>83.83%</td>
+		<td>77.67%</td>
+	</tr>
+</table>
+
+<br />
+
+<table id="nullCompanyName">
+	<caption>Null Company Name</caption>
+	<tr>
+		<th>Type</th>
+		<th>Count</th>
+		<th>Percentage</th>
+	</tr>
+	<tr>
+		<td>BusinessCoder Null Company Name Entries</td>
+		<td>2836</td>
+		<td>9.17%</td>
+	</tr>
+	<tr>
+		<td>SQL Null Company Name Entries</td>
+		<td>40</td>
+		<td>0.12%</td>
+	</tr>
+</table>
+
+
+<br />
+
+<table id="contactIntersect">
+	<caption>Matched Contacts between SQL Input and BusinessCoder</caption>
+	<tr>
+		<th>Contacts Matched Count</th>
+		<th>Total Contacts</th>
+		<th>Percentage out of Total Contact Entries</th>
+	</tr>
+	<tr>
+		<td>16359</td>
+		<td>33372</td>
+		<td>49.02%</td>
+	</tr>
+</table>
+
+<br />
+
+<p>
+	<b>Notes:</b> <br /> This report uses
+	http://etstage1.melissadata.com:30070/WEB/BusinessCoder/doBusinessCoderUS
+	<br />
+	<br /> All counts and percentages are out of the total distinct entries
+	from the input data set, NOT the total entries.
+	<br />
+	<br /> Currently, Input contacts' company name is matched using equal 'companyName'.
+	This skews the Contacts Statistics table. It can be changed to either like or excludes,
+	which will both increase the Input Contacts.
+	<br />
+	<br /> 'Percentage out of Total Entries' is out of static size of entire SQL table.
+</p>
+
+</body>
+</html>
